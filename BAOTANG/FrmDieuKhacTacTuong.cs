@@ -488,7 +488,7 @@ namespace BAOTANG
                                     command.Parameters.AddWithValue("@KHOILUONG", txtKhoiLuong.Text);
                                     command.Parameters.AddWithValue("@PHONGCACH", txtPhongCach.Text);
 
-                                    command.Parameters.AddWithValue("@IDBST", loaiDiMuon.cmbBST.SelectedItem.ToString());
+                                    command.Parameters.AddWithValue("@IDBST", loaiDiMuon.cmbBST.SelectedValue.ToString());
                                     command.Parameters.AddWithValue("@NGAYMUON", loaiDiMuon.dtNgayMuon.DateTime);
                                     command.Parameters.AddWithValue("@NGAYTRA", loaiDiMuon.dtNgayTra.DateTime);
 

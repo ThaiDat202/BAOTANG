@@ -42,7 +42,7 @@ namespace BAOTANG
                     DateTime ngayTra = reader.GetDateTime(3);
 
                     txtMATPNT.Text = MATPNT.ToString();
-                    cmbBST.SelectedItem = idbst.ToString();
+                    cmbBST.Text = idbst.ToString();
                     dtNgayMuon.Text = ngayMuon.ToString("yyyy/MM/dd");
                     dtNgayTra.Text = ngayTra.ToString("yyyy/MM/dd");
 

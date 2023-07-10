@@ -69,6 +69,7 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcnTPNT = new DevExpress.XtraGrid.GridControl();
             this.bar2 = new DevExpress.XtraBars.Bar();
+            this.btnItemUndo = new DevExpress.XtraBars.BarButtonItem();
             iDCTLLabel = new System.Windows.Forms.Label();
             tENTRIENLAMLabel = new System.Windows.Forms.Label();
             nGAYBATDAULabel = new System.Windows.Forms.Label();
@@ -321,8 +322,9 @@
             this.btnXoa,
             this.btnReload,
             this.btnThoat,
-            this.barButtonItem1});
-            this.barManager1.MaxItemId = 6;
+            this.barButtonItem1,
+            this.btnItemUndo});
+            this.barManager1.MaxItemId = 7;
             // 
             // bar1
             // 
@@ -335,6 +337,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGhi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnReload),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnItemUndo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnThoat)});
             this.bar1.Text = "Tools";
             // 
@@ -489,6 +492,16 @@
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
+            // btnItemUndo
+            // 
+            this.btnItemUndo.Caption = "Undo";
+            this.btnItemUndo.Enabled = false;
+            this.btnItemUndo.Id = 6;
+            this.btnItemUndo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btnItemUndo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnItemUndo.Name = "btnItemUndo";
+            this.btnItemUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemUndo_ItemClick);
+            // 
             // FrmCuocTrienLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -563,5 +576,6 @@
         private DevExpress.XtraGrid.GridControl gcnTPNT;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraBars.BarButtonItem btnItemUndo;
     }
 }

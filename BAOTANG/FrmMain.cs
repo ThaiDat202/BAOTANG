@@ -43,12 +43,12 @@ namespace BAOTANG
             if (Program.mGroup == "ADMIN")
             {
                 Program.frmMain.rbNV.Visible = Program.frmMain.rbNghiepVu.Visible = Program.frmMain.rbTK.Visible = Program.frmMain.rbCaiDat.Visible = true;
-                Program.frmMain.btnTaoTK.Enabled = Program.frmMain.btnXoaTK.Enabled = Program.frmMain.btnDangXuat.Enabled = true;
+                Program.frmMain.btnTaoTK.Enabled = Program.frmMain.btnXoaTK.Enabled = Program.frmMain.btnDangXuat.Enabled = Program.frmMain.btnAddCTL.Enabled = true;
             }
             else if(Program.mGroup == "MANAGER")
             {
                 Program.frmMain.rbNV.Visible = Program.frmMain.rbNghiepVu.Visible = Program.frmMain.rbTK.Visible = true;
-                Program.frmMain.btnTaoTK.Enabled = Program.frmMain.btnDangXuat.Enabled = true;
+                Program.frmMain.btnTaoTK.Enabled = Program.frmMain.btnDangXuat.Enabled = Program.frmMain.btnAddCTL.Enabled = true;
             }
             else
             {

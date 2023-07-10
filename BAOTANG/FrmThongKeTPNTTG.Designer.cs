@@ -42,19 +42,22 @@
             this.cbxIDTG = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             iDTACGIALabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bAOTANGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTACGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iDTACGIALabel
             // 
             iDTACGIALabel.AutoSize = true;
             iDTACGIALabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            iDTACGIALabel.Location = new System.Drawing.Point(132, 213);
+            iDTACGIALabel.Location = new System.Drawing.Point(269, 186);
             iDTACGIALabel.Name = "iDTACGIALabel";
             iDTACGIALabel.Size = new System.Drawing.Size(125, 26);
             iDTACGIALabel.TabIndex = 1;
@@ -93,7 +96,7 @@
             // btnXem
             // 
             this.btnXem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXem.Location = new System.Drawing.Point(90, 326);
+            this.btnXem.Location = new System.Drawing.Point(205, 302);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(301, 58);
             this.btnXem.TabIndex = 3;
@@ -128,7 +131,7 @@
             this.cbxIDTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIDTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbxIDTG.FormattingEnabled = true;
-            this.cbxIDTG.Location = new System.Drawing.Point(294, 202);
+            this.cbxIDTG.Location = new System.Drawing.Point(466, 180);
             this.cbxIDTG.Name = "cbxIDTG";
             this.cbxIDTG.Size = new System.Drawing.Size(261, 37);
             this.cbxIDTG.TabIndex = 4;
@@ -137,7 +140,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(489, 326);
+            this.btnThoat.Location = new System.Drawing.Point(597, 302);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(182, 58);
             this.btnThoat.TabIndex = 13;
@@ -149,22 +152,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 77);
+            this.label1.Location = new System.Drawing.Point(256, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(442, 37);
             this.label1.TabIndex = 14;
             this.label1.Text = "Thông Tin TPNT Của Tác Giả";
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.btnXem);
+            this.panelControl1.Controls.Add(this.btnThoat);
+            this.panelControl1.Controls.Add(this.cbxIDTG);
+            this.panelControl1.Controls.Add(iDTACGIALabel);
+            this.panelControl1.Location = new System.Drawing.Point(580, 170);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1030, 450);
+            this.panelControl1.TabIndex = 15;
+            // 
             // FrmThongKeTPNTTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.cbxIDTG);
-            this.Controls.Add(this.btnXem);
-            this.Controls.Add(iDTACGIALabel);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.panelControl1);
             this.Name = "FrmThongKeTPNTTG";
             this.Text = "Thống Kê TPNT Tác Giả";
             this.Load += new System.EventHandler(this.FrmThongKeTPNTTG_Load);
@@ -173,8 +184,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTACGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -192,5 +205,6 @@
         private System.Windows.Forms.ComboBox cbxIDTG;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

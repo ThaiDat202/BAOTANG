@@ -66,7 +66,7 @@ namespace BAOTANG
         }
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            pcnDetail.Enabled = btnGhi.Enabled = true;
+            pcnDetail.Enabled = btnGhi.Enabled = btnItemUndo.Enabled = true;
             txtIDCLT.Enabled = false;
         }
 
@@ -162,6 +162,13 @@ namespace BAOTANG
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Close();
+        }
+
+        private void btnItemUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            cUOCTRIENLAMBindingSource.CancelEdit();
+            btnSua.Enabled = btnXoa.Enabled = btnReload.Enabled = btnThoat.Enabled = gcnCTL.Enabled = true;
+            btnGhi.Enabled = btnItemUndo.Enabled = pcnDetail.Enabled = false;
         }
     }
 }

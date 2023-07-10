@@ -244,6 +244,7 @@
             // btnAddCTL
             // 
             this.btnAddCTL.Caption = "Thêm các Cuộc triển lãm";
+            this.btnAddCTL.Enabled = false;
             this.btnAddCTL.Id = 15;
             this.btnAddCTL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCTL.ImageOptions.Image")));
             this.btnAddCTL.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddCTL.ImageOptions.LargeImage")));

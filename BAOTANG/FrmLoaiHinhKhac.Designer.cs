@@ -41,7 +41,7 @@
             this.pnlDetail = new DevExpress.XtraEditors.PanelControl();
             this.cmbTenTG = new System.Windows.Forms.ComboBox();
             this.vIEW_LOAIHINHKHACBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
+            this.BAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
             this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtPhongCach = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -85,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlDetail)).BeginInit();
             this.pnlDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_LOAIHINHKHACBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOTANGDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongCach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -218,17 +218,17 @@
             // vIEW_LOAIHINHKHACBindingSource
             // 
             this.vIEW_LOAIHINHKHACBindingSource.DataMember = "VIEW_LOAIHINHKHAC";
-            this.vIEW_LOAIHINHKHACBindingSource.DataSource = this.bAOTANGDataSet;
+            this.vIEW_LOAIHINHKHACBindingSource.DataSource = this.BAOTANGDataSet;
             // 
-            // bAOTANGDataSet
+            // BAOTANGDataSet
             // 
-            this.bAOTANGDataSet.DataSetName = "BAOTANGDataSet";
-            this.bAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.BAOTANGDataSet.DataSetName = "BAOTANGDataSet";
+            this.BAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tACGIABindingSource
             // 
             this.tACGIABindingSource.DataMember = "TACGIA";
-            this.tACGIABindingSource.DataSource = this.bAOTANGDataSet;
+            this.tACGIABindingSource.DataSource = this.BAOTANGDataSet;
             // 
             // txtPhongCach
             // 
@@ -286,6 +286,7 @@
             this.btnItemAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemAdd.ImageOptions.Image")));
             this.btnItemAdd.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemAdd.ImageOptions.LargeImage")));
             this.btnItemAdd.Name = "btnItemAdd";
+            this.btnItemAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemAdd_ItemClick);
             // 
             // btnItemEdit
             // 
@@ -295,6 +296,7 @@
             this.btnItemEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemEdit.ImageOptions.Image")));
             this.btnItemEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemEdit.ImageOptions.LargeImage")));
             this.btnItemEdit.Name = "btnItemEdit";
+            this.btnItemEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemEdit_ItemClick);
             // 
             // btnItemDelete
             // 
@@ -304,6 +306,7 @@
             this.btnItemDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemDelete.ImageOptions.Image")));
             this.btnItemDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemDelete.ImageOptions.LargeImage")));
             this.btnItemDelete.Name = "btnItemDelete";
+            this.btnItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemDelete_ItemClick);
             // 
             // btnItemSave
             // 
@@ -313,6 +316,7 @@
             this.btnItemSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemSave.ImageOptions.Image")));
             this.btnItemSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemSave.ImageOptions.LargeImage")));
             this.btnItemSave.Name = "btnItemSave";
+            this.btnItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemSave_ItemClick);
             // 
             // btnItemReload
             // 
@@ -321,6 +325,7 @@
             this.btnItemReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemReload.ImageOptions.Image")));
             this.btnItemReload.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemReload.ImageOptions.LargeImage")));
             this.btnItemReload.Name = "btnItemReload";
+            this.btnItemReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemReload_ItemClick);
             // 
             // btnItemUndo
             // 
@@ -330,6 +335,7 @@
             this.btnItemUndo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemUndo.ImageOptions.Image")));
             this.btnItemUndo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemUndo.ImageOptions.LargeImage")));
             this.btnItemUndo.Name = "btnItemUndo";
+            this.btnItemUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemUndo_ItemClick);
             // 
             // btnItemExit
             // 
@@ -338,6 +344,7 @@
             this.btnItemExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemExit.ImageOptions.Image")));
             this.btnItemExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemExit.ImageOptions.LargeImage")));
             this.btnItemExit.Name = "btnItemExit";
+            this.btnItemExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemExit_ItemClick);
             // 
             // btnItemReadMore
             // 
@@ -346,6 +353,7 @@
             this.btnItemReadMore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemReadMore.ImageOptions.Image")));
             this.btnItemReadMore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemReadMore.ImageOptions.LargeImage")));
             this.btnItemReadMore.Name = "btnItemReadMore";
+            this.btnItemReadMore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemReadMore_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -479,6 +487,7 @@
             this.vIEW_LOAIHINHKHACDataGridView.RowTemplate.Height = 24;
             this.vIEW_LOAIHINHKHACDataGridView.Size = new System.Drawing.Size(1924, 243);
             this.vIEW_LOAIHINHKHACDataGridView.TabIndex = 5;
+            this.vIEW_LOAIHINHKHACDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vIEW_LOAIHINHKHACDataGridView_CellContentClick);
             // 
             // MATPNT
             // 
@@ -549,7 +558,7 @@
             this.pnlDetail.ResumeLayout(false);
             this.pnlDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_LOAIHINHKHACBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOTANGDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongCach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -567,7 +576,7 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl pnlDetail;
-        private BAOTANGDataSet bAOTANGDataSet;
+        private BAOTANGDataSet BAOTANGDataSet;
         
         private BAOTANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraBars.BarManager barManager1;

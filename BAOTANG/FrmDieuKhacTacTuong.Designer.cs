@@ -43,7 +43,7 @@
             this.pnlDetail = new DevExpress.XtraEditors.PanelControl();
             this.txtPhongCach = new DevExpress.XtraEditors.TextEdit();
             this.vIEW_DIEUKHACTACTUONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
+            this.BAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnItemAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -94,7 +94,7 @@
             this.pnlDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongCach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_DIEUKHACTACTUONGBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOTANGDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKhoiLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChieuCao.Properties)).BeginInit();
@@ -249,12 +249,12 @@
             // vIEW_DIEUKHACTACTUONGBindingSource
             // 
             this.vIEW_DIEUKHACTACTUONGBindingSource.DataMember = "VIEW_DIEUKHACTACTUONG";
-            this.vIEW_DIEUKHACTACTUONGBindingSource.DataSource = this.bAOTANGDataSet;
+            this.vIEW_DIEUKHACTACTUONGBindingSource.DataSource = this.BAOTANGDataSet;
             // 
-            // bAOTANGDataSet
+            // BAOTANGDataSet
             // 
-            this.bAOTANGDataSet.DataSetName = "BAOTANGDataSet";
-            this.bAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.BAOTANGDataSet.DataSetName = "BAOTANGDataSet";
+            this.BAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // barManager1
             // 
@@ -301,6 +301,7 @@
             this.btnItemAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemAdd.ImageOptions.Image")));
             this.btnItemAdd.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemAdd.ImageOptions.LargeImage")));
             this.btnItemAdd.Name = "btnItemAdd";
+            this.btnItemAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemAdd_ItemClick);
             // 
             // btnItemEdit
             // 
@@ -310,6 +311,7 @@
             this.btnItemEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemEdit.ImageOptions.Image")));
             this.btnItemEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemEdit.ImageOptions.LargeImage")));
             this.btnItemEdit.Name = "btnItemEdit";
+            this.btnItemEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemEdit_ItemClick);
             // 
             // btnItemDelete
             // 
@@ -319,6 +321,7 @@
             this.btnItemDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemDelete.ImageOptions.Image")));
             this.btnItemDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemDelete.ImageOptions.LargeImage")));
             this.btnItemDelete.Name = "btnItemDelete";
+            this.btnItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemDelete_ItemClick);
             // 
             // btnItemSave
             // 
@@ -328,6 +331,7 @@
             this.btnItemSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemSave.ImageOptions.Image")));
             this.btnItemSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemSave.ImageOptions.LargeImage")));
             this.btnItemSave.Name = "btnItemSave";
+            this.btnItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemSave_ItemClick);
             // 
             // btnItemReload
             // 
@@ -336,6 +340,7 @@
             this.btnItemReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemReload.ImageOptions.Image")));
             this.btnItemReload.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemReload.ImageOptions.LargeImage")));
             this.btnItemReload.Name = "btnItemReload";
+            this.btnItemReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemReload_ItemClick);
             // 
             // btnItemUndo
             // 
@@ -345,6 +350,7 @@
             this.btnItemUndo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemUndo.ImageOptions.Image")));
             this.btnItemUndo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemUndo.ImageOptions.LargeImage")));
             this.btnItemUndo.Name = "btnItemUndo";
+            this.btnItemUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemUndo_ItemClick);
             // 
             // btnItemExit
             // 
@@ -353,6 +359,7 @@
             this.btnItemExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemExit.ImageOptions.Image")));
             this.btnItemExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemExit.ImageOptions.LargeImage")));
             this.btnItemExit.Name = "btnItemExit";
+            this.btnItemExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemExit_ItemClick);
             // 
             // btnItemReadMore
             // 
@@ -361,6 +368,7 @@
             this.btnItemReadMore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemReadMore.ImageOptions.Image")));
             this.btnItemReadMore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemReadMore.ImageOptions.LargeImage")));
             this.btnItemReadMore.Name = "btnItemReadMore";
+            this.btnItemReadMore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemReadMore_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -444,7 +452,7 @@
             // tACGIABindingSource
             // 
             this.tACGIABindingSource.DataMember = "TACGIA";
-            this.tACGIABindingSource.DataSource = this.bAOTANGDataSet;
+            this.tACGIABindingSource.DataSource = this.BAOTANGDataSet;
             // 
             // txtChuDe
             // 
@@ -537,6 +545,7 @@
             this.vIEW_DIEUKHACTACTUONGDataGridView.RowTemplate.Height = 24;
             this.vIEW_DIEUKHACTACTUONGDataGridView.Size = new System.Drawing.Size(1924, 243);
             this.vIEW_DIEUKHACTACTUONGDataGridView.TabIndex = 5;
+            this.vIEW_DIEUKHACTACTUONGDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vIEW_DIEUKHACTACTUONGDataGridView_CellContentClick);
             // 
             // MATPNT
             // 
@@ -622,7 +631,7 @@
             this.pnlDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongCach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_DIEUKHACTACTUONGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOTANGDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKhoiLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChieuCao.Properties)).EndInit();
@@ -647,7 +656,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private BAOTANGDataSet bAOTANGDataSet;
+        private BAOTANGDataSet BAOTANGDataSet;
         
         private BAOTANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         

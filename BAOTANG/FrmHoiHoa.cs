@@ -46,7 +46,7 @@ namespace BAOTANG
         private void vIEW_HOIHOADataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = vIEW_HOIHOADataGridView.SelectedRows[0];
-            cmbTenTG.Text = selectedRow.Cells["TACGIA"].Value.ToString();
+            
         }
 
         //btnItemReadMore
@@ -315,7 +315,6 @@ namespace BAOTANG
                         if (Program.Connect() == 0) return;
                         try
                         {
-                            
                             using (SqlCommand command = new SqlCommand("SP_HOIHOA_ADDLOAIDIMUON", Program.conn))
                             {
                                 command.CommandType = CommandType.StoredProcedure;

@@ -123,8 +123,9 @@
             // cbxIDTG
             // 
             this.cbxIDTG.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tACGIABindingSource, "IDTACGIA", true));
-            this.cbxIDTG.DataSource = this.tPNTBindingSource;
+            this.cbxIDTG.DataSource = this.tACGIABindingSource1;
             this.cbxIDTG.DisplayMember = "IDTACGIA";
+            this.cbxIDTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIDTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbxIDTG.FormattingEnabled = true;
             this.cbxIDTG.Location = new System.Drawing.Point(294, 202);
@@ -150,7 +151,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(171, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(463, 38);
+            this.label1.Size = new System.Drawing.Size(442, 37);
             this.label1.TabIndex = 14;
             this.label1.Text = "Thông Tin TPNT Của Tác Giả";
             // 

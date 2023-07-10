@@ -57,7 +57,6 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -94,7 +93,7 @@
             // 
             iDCTLLabel.AutoSize = true;
             iDCTLLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            iDCTLLabel.Location = new System.Drawing.Point(90, 95);
+            iDCTLLabel.Location = new System.Drawing.Point(90, 117);
             iDCTLLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             iDCTLLabel.Name = "iDCTLLabel";
             iDCTLLabel.Size = new System.Drawing.Size(84, 26);
@@ -105,7 +104,7 @@
             // 
             tENTRIENLAMLabel.AutoSize = true;
             tENTRIENLAMLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            tENTRIENLAMLabel.Location = new System.Drawing.Point(968, 89);
+            tENTRIENLAMLabel.Location = new System.Drawing.Point(968, 117);
             tENTRIENLAMLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             tENTRIENLAMLabel.Name = "tENTRIENLAMLabel";
             tENTRIENLAMLabel.Size = new System.Drawing.Size(175, 26);
@@ -116,7 +115,7 @@
             // 
             nGAYBATDAULabel.AutoSize = true;
             nGAYBATDAULabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            nGAYBATDAULabel.Location = new System.Drawing.Point(90, 179);
+            nGAYBATDAULabel.Location = new System.Drawing.Point(90, 216);
             nGAYBATDAULabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nGAYBATDAULabel.Name = "nGAYBATDAULabel";
             nGAYBATDAULabel.Size = new System.Drawing.Size(168, 26);
@@ -127,7 +126,7 @@
             // 
             nGAYKETTHUCLabel.AutoSize = true;
             nGAYKETTHUCLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            nGAYKETTHUCLabel.Location = new System.Drawing.Point(968, 181);
+            nGAYKETTHUCLabel.Location = new System.Drawing.Point(961, 216);
             nGAYKETTHUCLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nGAYKETTHUCLabel.Name = "nGAYKETTHUCLabel";
             nGAYKETTHUCLabel.Size = new System.Drawing.Size(182, 26);
@@ -138,7 +137,7 @@
             // 
             this.gcnCTL.DataSource = this.cUOCTRIENLAMBindingSource;
             this.gcnCTL.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            this.gcnCTL.Location = new System.Drawing.Point(19, 145);
+            this.gcnCTL.Location = new System.Drawing.Point(15, 110);
             this.gcnCTL.MainView = this.gridView1;
             this.gcnCTL.Margin = new System.Windows.Forms.Padding(6);
             this.gcnCTL.Name = "gcnCTL";
@@ -222,17 +221,17 @@
             this.pcnDetail.Controls.Add(this.label7);
             this.pcnDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pcnDetail.Enabled = false;
-            this.pcnDetail.Location = new System.Drawing.Point(0, 632);
+            this.pcnDetail.Location = new System.Drawing.Point(0, 557);
             this.pcnDetail.Margin = new System.Windows.Forms.Padding(6);
             this.pcnDetail.Name = "pcnDetail";
-            this.pcnDetail.Size = new System.Drawing.Size(1362, 207);
+            this.pcnDetail.Size = new System.Drawing.Size(1726, 271);
             this.pcnDetail.TabIndex = 2;
             // 
             // deTo
             // 
             this.deTo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.cUOCTRIENLAMBindingSource, "NGAYKETTHUC", true));
             this.deTo.EditValue = null;
-            this.deTo.Location = new System.Drawing.Point(1274, 175);
+            this.deTo.Location = new System.Drawing.Point(1273, 213);
             this.deTo.Margin = new System.Windows.Forms.Padding(6);
             this.deTo.Name = "deTo";
             this.deTo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -248,7 +247,7 @@
             // 
             this.deFrom.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.cUOCTRIENLAMBindingSource, "NGAYBATDAU", true));
             this.deFrom.EditValue = null;
-            this.deFrom.Location = new System.Drawing.Point(438, 175);
+            this.deFrom.Location = new System.Drawing.Point(438, 213);
             this.deFrom.Margin = new System.Windows.Forms.Padding(6);
             this.deFrom.Name = "deFrom";
             this.deFrom.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -264,7 +263,7 @@
             // 
             this.txtTenTL.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUOCTRIENLAMBindingSource, "TENTRIENLAM", true));
             this.txtTenTL.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenTL.Location = new System.Drawing.Point(1274, 79);
+            this.txtTenTL.Location = new System.Drawing.Point(1274, 114);
             this.txtTenTL.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.Size = new System.Drawing.Size(303, 34);
@@ -274,7 +273,7 @@
             // 
             this.txtIDCLT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUOCTRIENLAMBindingSource, "IDCTL", true));
             this.txtIDCLT.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtIDCLT.Location = new System.Drawing.Point(438, 85);
+            this.txtIDCLT.Location = new System.Drawing.Point(439, 114);
             this.txtIDCLT.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDCLT.Name = "txtIDCLT";
             this.txtIDCLT.Size = new System.Drawing.Size(315, 34);
@@ -310,8 +309,7 @@
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar3});
+            this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -325,7 +323,6 @@
             this.btnThoat,
             this.barButtonItem1});
             this.barManager1.MaxItemId = 6;
-            this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
             // 
@@ -394,33 +391,21 @@
             this.btnThoat.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1362, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1726, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 839);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 828);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1362, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1726, 0);
             // 
             // barDockControlLeft
             // 
@@ -428,15 +413,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 809);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 798);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1362, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1726, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 809);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 798);
             // 
             // barButtonItem1
             // 
@@ -451,7 +436,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(13, 87);
+            this.label1.Location = new System.Drawing.Point(18, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(328, 32);
@@ -462,7 +447,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(700, 87);
+            this.label2.Location = new System.Drawing.Point(700, 50);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(512, 32);
@@ -485,7 +470,7 @@
             // 
             // gcnTPNT
             // 
-            this.gcnTPNT.Location = new System.Drawing.Point(706, 145);
+            this.gcnTPNT.Location = new System.Drawing.Point(706, 110);
             this.gcnTPNT.MainView = this.gridView2;
             this.gcnTPNT.MenuManager = this.barManager1;
             this.gcnTPNT.Name = "gcnTPNT";
@@ -508,7 +493,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 859);
+            this.ClientSize = new System.Drawing.Size(1726, 828);
             this.Controls.Add(this.gcnTPNT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -566,7 +551,6 @@
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnReload;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
-        private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;

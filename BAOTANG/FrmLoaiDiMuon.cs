@@ -52,7 +52,7 @@ namespace BAOTANG
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy dữ liệu cho MATPNT: " + MATPNT, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy dữ liệu cho Mã TPNT: " + MATPNT, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 reader.Close();

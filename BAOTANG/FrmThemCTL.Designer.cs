@@ -92,7 +92,7 @@
             // 
             iDCTLLabel.AutoSize = true;
             iDCTLLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            iDCTLLabel.Location = new System.Drawing.Point(40, 108);
+            iDCTLLabel.Location = new System.Drawing.Point(40, 141);
             iDCTLLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iDCTLLabel.Name = "iDCTLLabel";
             iDCTLLabel.Size = new System.Drawing.Size(84, 26);
@@ -103,7 +103,7 @@
             // 
             tENTRIENLAMLabel.AutoSize = true;
             tENTRIENLAMLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            tENTRIENLAMLabel.Location = new System.Drawing.Point(716, 108);
+            tENTRIENLAMLabel.Location = new System.Drawing.Point(716, 141);
             tENTRIENLAMLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tENTRIENLAMLabel.Name = "tENTRIENLAMLabel";
             tENTRIENLAMLabel.Size = new System.Drawing.Size(175, 26);
@@ -114,7 +114,7 @@
             // 
             nGAYBATDAULabel.AutoSize = true;
             nGAYBATDAULabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            nGAYBATDAULabel.Location = new System.Drawing.Point(40, 209);
+            nGAYBATDAULabel.Location = new System.Drawing.Point(40, 246);
             nGAYBATDAULabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nGAYBATDAULabel.Name = "nGAYBATDAULabel";
             nGAYBATDAULabel.Size = new System.Drawing.Size(168, 26);
@@ -125,7 +125,7 @@
             // 
             nGAYKETTHUCLabel.AutoSize = true;
             nGAYKETTHUCLabel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            nGAYKETTHUCLabel.Location = new System.Drawing.Point(708, 212);
+            nGAYKETTHUCLabel.Location = new System.Drawing.Point(709, 246);
             nGAYKETTHUCLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nGAYKETTHUCLabel.Name = "nGAYKETTHUCLabel";
             nGAYKETTHUCLabel.Size = new System.Drawing.Size(182, 26);
@@ -136,7 +136,7 @@
             // 
             this.gcnTPNT.DataSource = this.vIEWTPNTBindingSource;
             this.gcnTPNT.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gcnTPNT.Location = new System.Drawing.Point(25, 130);
+            this.gcnTPNT.Location = new System.Drawing.Point(25, 105);
             this.gcnTPNT.MainView = this.gridView1;
             this.gcnTPNT.Margin = new System.Windows.Forms.Padding(4);
             this.gcnTPNT.Name = "gcnTPNT";
@@ -219,16 +219,16 @@
             this.pcnDetail.Controls.Add(this.label7);
             this.pcnDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pcnDetail.Enabled = false;
-            this.pcnDetail.Location = new System.Drawing.Point(0, 746);
+            this.pcnDetail.Location = new System.Drawing.Point(0, 498);
             this.pcnDetail.Margin = new System.Windows.Forms.Padding(4);
             this.pcnDetail.Name = "pcnDetail";
-            this.pcnDetail.Size = new System.Drawing.Size(1514, 309);
+            this.pcnDetail.Size = new System.Drawing.Size(1493, 340);
             this.pcnDetail.TabIndex = 2;
             // 
             // deTo
             // 
             this.deTo.EditValue = null;
-            this.deTo.Location = new System.Drawing.Point(1032, 205);
+            this.deTo.Location = new System.Drawing.Point(1032, 243);
             this.deTo.Margin = new System.Windows.Forms.Padding(4);
             this.deTo.MenuManager = this.barManager1;
             this.deTo.Name = "deTo";
@@ -331,15 +331,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1514, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1493, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1055);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 838);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1514, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1493, 0);
             // 
             // barDockControlLeft
             // 
@@ -347,20 +347,20 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1025);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 808);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1514, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1493, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 1025);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 808);
             // 
             // deFrom
             // 
             this.deFrom.EditValue = null;
-            this.deFrom.Location = new System.Drawing.Point(341, 201);
+            this.deFrom.Location = new System.Drawing.Point(340, 243);
             this.deFrom.Margin = new System.Windows.Forms.Padding(4);
             this.deFrom.MenuManager = this.barManager1;
             this.deFrom.Name = "deFrom";
@@ -376,7 +376,7 @@
             // txtTenTL
             // 
             this.txtTenTL.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenTL.Location = new System.Drawing.Point(1032, 98);
+            this.txtTenTL.Location = new System.Drawing.Point(1032, 138);
             this.txtTenTL.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.Size = new System.Drawing.Size(313, 34);
@@ -385,7 +385,7 @@
             // txtIDCTL
             // 
             this.txtIDCTL.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtIDCTL.Location = new System.Drawing.Point(341, 104);
+            this.txtIDCTL.Location = new System.Drawing.Point(340, 138);
             this.txtIDCTL.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDCTL.Name = "txtIDCTL";
             this.txtIDCTL.Size = new System.Drawing.Size(295, 34);
@@ -395,7 +395,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(24, 21);
+            this.label7.Location = new System.Drawing.Point(39, 52);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(455, 32);
@@ -406,7 +406,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(19, 72);
+            this.label1.Location = new System.Drawing.Point(19, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(554, 32);
@@ -417,7 +417,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(747, 72);
+            this.label2.Location = new System.Drawing.Point(747, 50);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(515, 32);
@@ -464,7 +464,7 @@
             this.gcnTP.AllowUserToDeleteRows = false;
             this.gcnTP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gcnTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gcnTP.Location = new System.Drawing.Point(753, 130);
+            this.gcnTP.Location = new System.Drawing.Point(753, 105);
             this.gcnTP.Name = "gcnTP";
             this.gcnTP.ReadOnly = true;
             this.gcnTP.RowHeadersWidth = 51;
@@ -477,7 +477,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1514, 1055);
+            this.ClientSize = new System.Drawing.Size(1514, 832);
             this.Controls.Add(this.gcnTP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

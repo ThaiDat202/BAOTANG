@@ -54,6 +54,7 @@ namespace BAOTANG
             {
                 Program.frmMain.rbNghiepVu.Visible = Program.frmMain.rbTK.Visible = true;
                 Program.frmMain.btnDangXuat.Enabled = true;
+                Program.frmMain.btnAddCTL.Enabled = false;
             }
 
         }

@@ -488,7 +488,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmThemCTL";
-            this.Text = "FrmThemCTL";
+            this.Text = "Thêm Cuộc Triển Lãm";
             this.Load += new System.EventHandler(this.FrmThemCTL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcnTPNT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWTPNTBindingSource)).EndInit();

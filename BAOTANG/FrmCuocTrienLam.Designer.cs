@@ -504,7 +504,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmCuocTrienLam";
-            this.Text = "FrmCuocTrienLam";
+            this.Text = "Cuộc Triển Lãm";
             this.Load += new System.EventHandler(this.FrmCuocTrienLam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcnCTL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUOCTRIENLAMBindingSource)).EndInit();

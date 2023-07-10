@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDetail = new DevExpress.XtraEditors.PanelControl();
+            this.cmbBST = new System.Windows.Forms.ComboBox();
+            this.BOSUUTAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtNgayTra = new DevExpress.XtraEditors.DateEdit();
@@ -41,15 +44,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.BAOTANGDataSet = new BAOTANG.BAOTANGDataSet();
             this.tableAdapterManager = new BAOTANG.BAOTANGDataSetTableAdapters.TableAdapterManager();
             this.BOSUUTAPTableAdapter = new BAOTANG.BAOTANGDataSetTableAdapters.BOSUUTAPTableAdapter();
-            this.BOSUUTAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOAIDIMUONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOAIDIMUONTableAdapter = new BAOTANG.BAOTANGDataSetTableAdapters.LOAIDIMUONTableAdapter();
-            this.cmbBST = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnlDetail)).BeginInit();
             this.pnlDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BOSUUTAPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayTra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayTra.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayMuon.Properties)).BeginInit();
@@ -57,8 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMATPNT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BOSUUTAPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDIMUONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +91,29 @@
             this.pnlDetail.Name = "pnlDetail";
             this.pnlDetail.Size = new System.Drawing.Size(1310, 520);
             this.pnlDetail.TabIndex = 18;
+            // 
+            // cmbBST
+            // 
+            this.cmbBST.DataSource = this.BOSUUTAPBindingSource;
+            this.cmbBST.DisplayMember = "TENBST";
+            this.cmbBST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBST.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBST.FormattingEnabled = true;
+            this.cmbBST.Location = new System.Drawing.Point(803, 213);
+            this.cmbBST.Name = "cmbBST";
+            this.cmbBST.Size = new System.Drawing.Size(296, 36);
+            this.cmbBST.TabIndex = 21;
+            this.cmbBST.ValueMember = "IDBST";
+            // 
+            // BOSUUTAPBindingSource
+            // 
+            this.BOSUUTAPBindingSource.DataMember = "BOSUUTAP";
+            this.BOSUUTAPBindingSource.DataSource = this.BAOTANGDataSet;
+            // 
+            // BAOTANGDataSet
+            // 
+            this.BAOTANGDataSet.DataSetName = "BAOTANGDataSet";
+            this.BAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnUpdate
             // 
@@ -199,11 +222,6 @@
             this.panelControl1.Size = new System.Drawing.Size(1310, 133);
             this.panelControl1.TabIndex = 23;
             // 
-            // BAOTANGDataSet
-            // 
-            this.BAOTANGDataSet.DataSetName = "BAOTANGDataSet";
-            this.BAOTANGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -224,11 +242,6 @@
             // 
             this.BOSUUTAPTableAdapter.ClearBeforeFill = true;
             // 
-            // BOSUUTAPBindingSource
-            // 
-            this.BOSUUTAPBindingSource.DataMember = "BOSUUTAP";
-            this.BOSUUTAPBindingSource.DataSource = this.BAOTANGDataSet;
-            // 
             // lOAIDIMUONBindingSource
             // 
             this.lOAIDIMUONBindingSource.DataMember = "LOAIDIMUON";
@@ -237,19 +250,6 @@
             // lOAIDIMUONTableAdapter
             // 
             this.lOAIDIMUONTableAdapter.ClearBeforeFill = true;
-            // 
-            // cmbBST
-            // 
-            this.cmbBST.DataSource = this.BOSUUTAPBindingSource;
-            this.cmbBST.DisplayMember = "TENBST";
-            this.cmbBST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBST.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBST.FormattingEnabled = true;
-            this.cmbBST.Location = new System.Drawing.Point(803, 213);
-            this.cmbBST.Name = "cmbBST";
-            this.cmbBST.Size = new System.Drawing.Size(296, 36);
-            this.cmbBST.TabIndex = 21;
-            this.cmbBST.ValueMember = "IDBST";
             // 
             // FrmLoaiDiMuon
             // 
@@ -264,6 +264,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlDetail)).EndInit();
             this.pnlDetail.ResumeLayout(false);
             this.pnlDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BOSUUTAPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayTra.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayTra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayMuon.Properties.CalendarTimeProperties)).EndInit();
@@ -272,8 +274,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BOSUUTAPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDIMUONBindingSource)).EndInit();
             this.ResumeLayout(false);
 

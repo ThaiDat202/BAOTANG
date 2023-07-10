@@ -315,7 +315,6 @@ namespace BAOTANG
                         if (Program.Connect() == 0) return;
                         try
                         {
-                            
                             using (SqlCommand command = new SqlCommand("SP_HOIHOA_ADDLOAIDIMUON", Program.conn))
                             {
                                 command.CommandType = CommandType.StoredProcedure;

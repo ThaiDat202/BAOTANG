@@ -56,7 +56,7 @@ namespace BAOTANG
             cmbChucVu.Items.Insert(1, "Quản Lý");
             cmbChucVu.Items.Insert(2, "Admin");
 
-            //txtCMND.Enabled = txtDiaChi.Enabled = txtHo.Enabled = txtMANV.Enabled = txtSDT.Enabled = txtTen.Enabled = cmbChucVu.Enabled = false;
+            
         }
 
         private void btnItemAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -67,9 +67,10 @@ namespace BAOTANG
             bdsNV.AddNew();
             txtMANV.Focus();
             flag = "add";
-            
+
             cmbChucVu.SelectedIndex = 0;
 
+            
             
         }
 
@@ -161,6 +162,11 @@ namespace BAOTANG
                 bdsNV.Position = vitri;
             btnItemAdd.Enabled = btnItemEdit.Enabled = btnItemDelete.Enabled = btnItemReload.Enabled = btnItemExit.Enabled = gctNV.Enabled = true;
             btnItemSave.Enabled = btnItemUndo.Enabled = pnlDetail.Enabled = false;
+
+            if (Program.mGroup == "MANAGER")
+            {
+                btnItemEdit.Enabled = btnItemDelete.Enabled = false;
+            }
         }
 
         private void btnItemExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -331,6 +337,10 @@ namespace BAOTANG
             btnItemAdd.Enabled = btnItemEdit.Enabled = btnItemDelete.Enabled = btnItemReload.Enabled = btnItemExit.Enabled = gctNV.Enabled = true;
             btnItemSave.Enabled = btnItemUndo.Enabled = false;
             pnlDetail.Enabled = false;
+            if (Program.mGroup == "MANAGER")
+            {
+                btnItemEdit.Enabled = btnItemDelete.Enabled = false;
+            }
         }
 
         private bool ValidatePhoneNumber(string phoneNumber)

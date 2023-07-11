@@ -227,89 +227,31 @@ namespace BAOTANG
 
         private void btnBackup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
-        }
-
-        private void btnRestore_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Backup Files (*.bak)|*.bak|All Files (*.*)|*.*";
-            openFileDialog.Title = "Chọn tệp tin backup";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            Form frm = this.CheckExists(typeof(FrmBackup));
+            if (frm != null) frm.Activate();
+            else
             {
-                //try
-                //{
-                    
-                //    string filePath = openFileDialog.FileName;
-
-                //    // Tiến hành khôi phục dữ liệu từ tệp tin được chọn
-                //    // Viết code ở đây để thực hiện việc khôi phục dữ liệu từ tệp tin
-                //    // Ví dụ: sử dụng SQL Server Management Objects (SMO) để khôi phục
-
-                //    // Ví dụ: SMO Restore
-                //    ServerConnection connection = new ServerConnection("DESKTOP-H0GEECA\\SERVER");
-                //    Server server = new Server(connection);
-
-                //    Restore restore = new Restore();
-                //    restore.Database = "BAOTANG";
-                //    restore.Action = RestoreActionType.Database;
-                //    restore.Devices.AddDevice(filePath, DeviceType.File);
-                //    restore.ReplaceDatabase = true;
-
-                //    string dataFilePath = @"C:\Program Files\Microsoft SQL Server\MSSQL15.SERVER\MSSQL\DATA\BAOTANG.mdf";
-                //    string logFilePath = @"C:\Program Files\Microsoft SQL Server\MSSQL15.SERVER\MSSQL\DATA\BAOTANG_log.ldf";
-
-                //    RelocateFile dataFile = new RelocateFile();
-                //    dataFile.LogicalFileName = "BAOTANG";
-                //    dataFile.PhysicalFileName = dataFilePath;
-
-                //    RelocateFile logFile = new RelocateFile();
-                //    logFile.LogicalFileName = "BAOTANG_log";
-                //    logFile.PhysicalFileName = logFilePath;
-
-                //    restore.RelocateFiles.Add(dataFile);
-                //    restore.RelocateFiles.Add(logFile);
-
-                //    restore.SqlRestore(server);
-
-                //    // Sau khi khôi phục xong, thông báo cho người dùng
-                //    MessageBox.Show("Đã khôi phục dữ liệu từ tệp tin backup.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //catch (SqlException ex)
-                //{
-                //    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    Close();
-                //}
+                FrmBackup f = new FrmBackup();
+                f.MdiParent = this;
+                f.Show();
 
             }
         }
 
-        //private void btnLoaiSoHuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        //{
-        //    Form frm = this.CheckExists(typeof(FrmLoaiSoHuu));
-        //    if (frm != null) frm.Activate();
-        //    else
-        //    {
-        //        FrmLoaiSoHuu f = new FrmLoaiSoHuu();
-        //        f.MdiParent = this;
-        //        f.Show();
+        private void btnRestore_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FrmRestore));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FrmRestore f = new FrmRestore();
+                f.MdiParent = this;
+                f.Show();
 
-        //    }
-        //}
+            }
+        }
 
-        //private void btnLoaiDiMuon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        //{
-        //    Form frm = this.CheckExists(typeof(FrmLoaiDiMuon));
-        //    if (frm != null) frm.Activate();
-        //    else
-        //    {
-        //        FrmLoaiDiMuon f = new FrmLoaiDiMuon();
-        //        f.MdiParent = this;
-        //        f.Show();
-
-        //    }
-        //}
+       
 
         private void btnXoaTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

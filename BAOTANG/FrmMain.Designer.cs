@@ -374,13 +374,11 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnBackup);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Sao Lưu";
             // 
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.btnRestore);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "Hồi Phục";
             // 
             // xtraTabbedMdiManager1
             // 

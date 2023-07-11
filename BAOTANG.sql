@@ -1,39 +1,42 @@
 USE [BAOTANG]
 GO
-/****** Object:  User [NV001]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV001]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV001] WITHOUT LOGIN WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  User [NV002]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV002]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV002] FOR LOGIN [TDA] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  User [NV003]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV003]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV003] FOR LOGIN [LTH] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  User [NV004]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV004]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV004] FOR LOGIN [HVT] WITH DEFAULT_SCHEMA=[NV004]
 GO
-/****** Object:  User [NV005]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV005]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV005] FOR LOGIN [NTL] WITH DEFAULT_SCHEMA=[NV005]
 GO
-/****** Object:  User [NV006]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV006]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV006] FOR LOGIN [HTB] WITH DEFAULT_SCHEMA=[NV006]
 GO
-/****** Object:  User [NV007]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV007]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV007] FOR LOGIN [DVH] WITH DEFAULT_SCHEMA=[NV007]
 GO
-/****** Object:  User [NV008]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV008]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV008] WITHOUT LOGIN WITH DEFAULT_SCHEMA=[NV008]
 GO
-/****** Object:  User [NV009]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV009]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE USER [NV009] WITHOUT LOGIN WITH DEFAULT_SCHEMA=[NV009]
 GO
-/****** Object:  DatabaseRole [ADMIN]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  User [NV123]    Script Date: 2023-07-11 09:57:56 PM ******/
+CREATE USER [NV123] FOR LOGIN [HVD] WITH DEFAULT_SCHEMA=[NV123]
+GO
+/****** Object:  DatabaseRole [ADMIN]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE ROLE [ADMIN]
 GO
-/****** Object:  DatabaseRole [EMPLOYEE]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  DatabaseRole [EMPLOYEE]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE ROLE [EMPLOYEE]
 GO
-/****** Object:  DatabaseRole [MANAGER]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  DatabaseRole [MANAGER]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE ROLE [MANAGER]
 GO
 ALTER ROLE [MANAGER] ADD MEMBER [NV001]
@@ -72,31 +75,38 @@ ALTER ROLE [MANAGER] ADD MEMBER [NV009]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [NV009]
 GO
+ALTER ROLE [EMPLOYEE] ADD MEMBER [NV123]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [NV123]
+GO
 ALTER ROLE [db_owner] ADD MEMBER [ADMIN]
 GO
 ALTER ROLE [db_datareader] ADD MEMBER [EMPLOYEE]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [MANAGER]
 GO
-/****** Object:  Schema [NV004]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV004]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV004]
 GO
-/****** Object:  Schema [NV005]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV005]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV005]
 GO
-/****** Object:  Schema [NV006]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV006]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV006]
 GO
-/****** Object:  Schema [NV007]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV007]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV007]
 GO
-/****** Object:  Schema [NV008]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV008]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV008]
 GO
-/****** Object:  Schema [NV009]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV009]    Script Date: 2023-07-11 09:57:56 PM ******/
 CREATE SCHEMA [NV009]
 GO
-/****** Object:  UserDefinedFunction [dbo].[Check_Account]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Schema [NV123]    Script Date: 2023-07-11 09:57:56 PM ******/
+CREATE SCHEMA [NV123]
+GO
+/****** Object:  UserDefinedFunction [dbo].[Check_Account]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -111,7 +121,7 @@ BEGIN
 	RETURN 0
 END;
 GO
-/****** Object:  UserDefinedFunction [dbo].[Check_IDBST]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  UserDefinedFunction [dbo].[Check_IDBST]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,7 +140,7 @@ BEGIN
     RETURN @Check;
 END;
 GO
-/****** Object:  Table [dbo].[DIEUKHACVATACTUONG]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[DIEUKHACVATACTUONG]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -147,7 +157,7 @@ CREATE TABLE [dbo].[DIEUKHACVATACTUONG](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TACGIA]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[TACGIA]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -167,7 +177,7 @@ CREATE TABLE [dbo].[TACGIA](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TPNT]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[TPNT]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -184,7 +194,7 @@ CREATE TABLE [dbo].[TPNT](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[VIEW_DIEUKHACTACTUONG]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  View [dbo].[VIEW_DIEUKHACTACTUONG]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -204,7 +214,7 @@ FROM dbo.DIEUKHACVATACTUONG DKTT
 JOIN TPNT ON TPNT.MATPNT = DKTT.MATPNT
 JOIN TACGIA TG ON TG.IDTACGIA = TPNT.IDTACGIA;
 GO
-/****** Object:  Table [dbo].[LOAIHINHKHAC]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[LOAIHINHKHAC]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -219,7 +229,7 @@ CREATE TABLE [dbo].[LOAIHINHKHAC](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[VIEW_LOAIHINHKHAC]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  View [dbo].[VIEW_LOAIHINHKHAC]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -237,7 +247,7 @@ FROM dbo.LOAIHINHKHAC LHK
 JOIN TPNT ON TPNT.MATPNT = LHK.MATPNT
 JOIN TACGIA TG ON TG.IDTACGIA = TPNT.IDTACGIA;
 GO
-/****** Object:  View [dbo].[VIEW_TPNT]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  View [dbo].[VIEW_TPNT]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -257,7 +267,7 @@ TENTACGIA = (SELECT TG.TENTACGIA FROM TACGIA TG WHERE TG.IDTACGIA = TP.IDTACGIA)
 TP.CHUDE
 FROM TPNT TP
 GO
-/****** Object:  Table [dbo].[HOIHOA]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[HOIHOA]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -273,7 +283,7 @@ CREATE TABLE [dbo].[HOIHOA](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[VIEW_HOIHOA]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  View [dbo].[VIEW_HOIHOA]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -292,7 +302,7 @@ FROM HOIHOA HH
 JOIN TPNT ON TPNT.MATPNT = HH.MATPNT
 JOIN TACGIA TG ON TG.IDTACGIA = TPNT.IDTACGIA;
 GO
-/****** Object:  Table [dbo].[BOSUUTAP]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[BOSUUTAP]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -308,7 +318,7 @@ CREATE TABLE [dbo].[BOSUUTAP](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CT_CUOCTRIENLAM]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[CT_CUOCTRIENLAM]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -323,7 +333,7 @@ CREATE TABLE [dbo].[CT_CUOCTRIENLAM](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CUOCTRIENLAM]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[CUOCTRIENLAM]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -339,7 +349,7 @@ CREATE TABLE [dbo].[CUOCTRIENLAM](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[LOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -355,7 +365,7 @@ CREATE TABLE [dbo].[LOAIDIMUON](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[LOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -371,7 +381,7 @@ CREATE TABLE [dbo].[LOAISOHUU](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NHANVIEN]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  Table [dbo].[NHANVIEN]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -400,14 +410,25 @@ INSERT [dbo].[BOSUUTAP] ([IDBST], [TENBST], [HINHTHUCSUUTAP], [MANV]) VALUES (N'
 INSERT [dbo].[BOSUUTAP] ([IDBST], [TENBST], [HINHTHUCSUUTAP], [MANV]) VALUES (N'BST008    ', N'Bộ sưu tập 8', N'Giáo dục', N'NV006     ')
 GO
 INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT001   ', N'CTL001    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT001   ', N'CTL004    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT003   ', N'CTL004    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT004   ', N'CTL002    ')
 INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT005   ', N'CTL001    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT005   ', N'CTL004    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT006   ', N'CTL002    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT008   ', N'CTL002    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT008   ', N'CTL004    ')
 INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT009   ', N'CTL001    ')
+INSERT [dbo].[CT_CUOCTRIENLAM] ([MATPNT], [IDCTL]) VALUES (N'TPNT009   ', N'CTL004    ')
 GO
 INSERT [dbo].[CUOCTRIENLAM] ([IDCTL], [TENTRIENLAM], [NGAYBATDAU], [NGAYKETTHUC]) VALUES (N'CTL001    ', N'Hội chợ', CAST(N'2023-07-11' AS Date), CAST(N'2023-08-04' AS Date))
+INSERT [dbo].[CUOCTRIENLAM] ([IDCTL], [TENTRIENLAM], [NGAYBATDAU], [NGAYKETTHUC]) VALUES (N'CTL002    ', N'Hội Thảo', CAST(N'2023-07-04' AS Date), CAST(N'2023-08-04' AS Date))
+INSERT [dbo].[CUOCTRIENLAM] ([IDCTL], [TENTRIENLAM], [NGAYBATDAU], [NGAYKETTHUC]) VALUES (N'CTL004    ', N'Mùa Xuân', CAST(N'2023-07-11' AS Date), CAST(N'2023-07-29' AS Date))
 GO
 INSERT [dbo].[DIEUKHACVATACTUONG] ([MATPNT], [VATLIEU], [CHIEUCAO], [KHOILUONG], [PHONGCACH]) VALUES (N'TPNT001   ', N'Gỗ', N'100 cm', N'10 kg', N'Hiện đại')
 INSERT [dbo].[DIEUKHACVATACTUONG] ([MATPNT], [VATLIEU], [CHIEUCAO], [KHOILUONG], [PHONGCACH]) VALUES (N'TPNT002   ', N'Ðá', N'80 cm', N'20 kg', N'Cổ điển')
 INSERT [dbo].[DIEUKHACVATACTUONG] ([MATPNT], [VATLIEU], [CHIEUCAO], [KHOILUONG], [PHONGCACH]) VALUES (N'TPNT003   ', N'Sắt', N'120 cm', N'15 kg', N'Hiện đại')
+INSERT [dbo].[DIEUKHACVATACTUONG] ([MATPNT], [VATLIEU], [CHIEUCAO], [KHOILUONG], [PHONGCACH]) VALUES (N'TPNT011   ', N'Gỗ                            ', N'50cm      ', N'12kg      ', N'Hiện đại                                          ')
 GO
 INSERT [dbo].[HOIHOA] ([MATPNT], [CHATLIEU], [VATLIEU], [TRUONGPHAI]) VALUES (N'TPNT004   ', N'Màu nước', N'Giấy', N'Tranh cảnh')
 INSERT [dbo].[HOIHOA] ([MATPNT], [CHATLIEU], [VATLIEU], [TRUONGPHAI]) VALUES (N'TPNT005   ', N'Màu dầu', N'Vải', N'Tranh chân dung')
@@ -427,6 +448,7 @@ INSERT [dbo].[LOAISOHUU] ([MATPNT], [NGAYSOHUU], [TINHTRANG], [TRIGIA]) VALUES (
 INSERT [dbo].[LOAISOHUU] ([MATPNT], [NGAYSOHUU], [TINHTRANG], [TRIGIA]) VALUES (N'TPNT006   ', CAST(N'2023-03-01' AS Date), N'Mới', 8000000.0000)
 INSERT [dbo].[LOAISOHUU] ([MATPNT], [NGAYSOHUU], [TINHTRANG], [TRIGIA]) VALUES (N'TPNT007   ', CAST(N'2023-01-01' AS Date), N'Tốt', 5000000.0000)
 INSERT [dbo].[LOAISOHUU] ([MATPNT], [NGAYSOHUU], [TINHTRANG], [TRIGIA]) VALUES (N'TPNT009   ', CAST(N'2023-03-01' AS Date), N'Mới', 8000000.0000)
+INSERT [dbo].[LOAISOHUU] ([MATPNT], [NGAYSOHUU], [TINHTRANG], [TRIGIA]) VALUES (N'TPNT011   ', CAST(N'2023-07-11' AS Date), N'Mới                           ', 100000.0000)
 GO
 INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV001     ', N'Nguyễn Văn', N'Tèo', N'241883010 ', N'Hà Nội', N'0333333333', N'Quản Lý')
 INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV002     ', N'Trần Đức', N'Anh', N'241882456 ', N'Hồ Chí Minh', N'0444444444', N'Nhân Viên')
@@ -435,6 +457,7 @@ INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU])
 INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV005     ', N'Nguyễn Thị', N'Lành', N'241882345 ', N'Đắk Lắk', N'0777777777', N'Nhân Viên')
 INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV006     ', N'Hồ Thái', N'Bảo', N'241884356 ', N'Đồng Nai', N'0888888888', N'Quản Lý')
 INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV007     ', N'Đỗ Văn', N'Hậu', N'241884144 ', N'Long An', N'0999999999', N'Quản Lý')
+INSERT [dbo].[NHANVIEN] ([MANV], [HO], [TEN], [CMND], [DIACHI], [SDT], [CHUCVU]) VALUES (N'NV123     ', N'Hoàng Văn', N'Đức', N'241883287 ', N'Hà Nội', N'0298765432', N'Nhân Viên')
 GO
 INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG001     ', N'Nguyễn Thị Hương', CAST(N'1990-01-01' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 1')
 INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG002     ', N'Đào Duy Từ', CAST(N'1985-03-10' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 2')
@@ -442,6 +465,7 @@ INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH
 INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG004     ', N'Hoàng Quốc Việt', CAST(N'1985-03-10' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 4')
 INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG005     ', N'Lê Duy Nghĩa', CAST(N'1990-01-01' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 5')
 INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG006     ', N'Hoàng Lan Anh', CAST(N'1985-03-10' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 6')
+INSERT [dbo].[TACGIA] ([IDTACGIA], [TENTACGIA], [NGAYSINH], [NGAYMAT], [QUOCTICH], [THOIDAI], [PHONGCACH], [LOIDIENGIAI]) VALUES (N'TG007     ', N'Hồ Văn Báo', CAST(N'1994-06-14' AS Date), NULL, N'Việt Nam', N'Hiện đại', N'Châu Á', N'Mô tả tác giả 7')
 GO
 INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT001   ', N'Tác phẩm 1', 2020, N'Nghệ thuật', N'TG001     ')
 INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT002   ', N'Tác phẩm 2', 2015, N'Lịch sử', N'TG002     ')
@@ -452,6 +476,7 @@ INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VAL
 INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT007   ', N'Tác phẩm 7', 2020, N'Nghệ thuật', N'TG002     ')
 INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT008   ', N'Tác phẩm 8', 2015, N'Lịch sử', N'TG004     ')
 INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT009   ', N'Tác phẩm 9', 2018, N'Truyền thống', N'TG005     ')
+INSERT [dbo].[TPNT] ([MATPNT], [TENTPNT], [NAMSANGTAC], [CHUDE], [IDTACGIA]) VALUES (N'TPNT011   ', N'Tác phẩm 11                   ', 2023, N'Hội họa', N'TG003     ')
 GO
 ALTER TABLE [dbo].[BOSUUTAP]  WITH CHECK ADD  CONSTRAINT [FK_BOSUUTAP_NHANVIEN] FOREIGN KEY([MANV])
 REFERENCES [dbo].[NHANVIEN] ([MANV])
@@ -520,7 +545,7 @@ ON UPDATE CASCADE
 GO
 ALTER TABLE [dbo].[TPNT] CHECK CONSTRAINT [FK_TACGIA]
 GO
-/****** Object:  StoredProcedure [dbo].[Lay_Login_Tu_Username]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[Lay_Login_Tu_Username]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -536,21 +561,40 @@ AS
 		select name from SYS.syslogins where sid = @siD
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Backup_Database]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_BackupBaoTangDatabase]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROC [dbo].[SP_Backup_Database]
-@LOCATION NVARCHAR(1000)
+CREATE PROCEDURE [dbo].[SP_BackupBaoTangDatabase]
+    @BackupPath NVARCHAR(255),
+    @NameFile NVARCHAR(128)
 AS
 BEGIN
-	BACKUP DATABASE BAOTANG
-	TO DISK = @LOCATION
-	WITH FORMAT, INIT;
+    SET NOCOUNT ON;
+
+    DECLARE @FullBackupPath NVARCHAR(255) = CONCAT(@BackupPath, '\', @NameFile, '.bak');
+    DECLARE @DatabaseName NVARCHAR(128) = 'BAOTANG';
+
+    -- Kiểm tra xem tệp backup đã tồn tại hay chưa
+    IF EXISTS (SELECT 1 FROM sys.sysdevices WHERE name = 'BaoTangDevices')
+    BEGIN
+        -- Thực hiện backup database
+        BACKUP DATABASE @DatabaseName
+        TO DISK = @FullBackupPath
+        WITH FORMAT, NAME = 'Full Database Backup';
+
+        -- Hiển thị thông báo khi backup thành công
+        PRINT 'Backup database BAOTANG thành công.';
+    END
+    ELSE
+    BEGIN
+        -- Hiển thị thông báo khi thiết bị backup chưa được tạo
+        PRINT 'Thiết bị backup BaoTangDevices chưa được tạo.';
+    END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_CMND]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_CMND]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -567,7 +611,7 @@ DECLARE @check int
 SELECT @check	--Không bị trùng được thêm
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DangNhap]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DangNhap]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -589,7 +633,7 @@ BEGIN
 										WHERE NAME = @tenUser))
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Delete_Infor_BoSuuTap]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_Delete_Infor_BoSuuTap]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -619,7 +663,7 @@ BEGIN
 	END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Delete_Infor_NhanVien]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_Delete_Infor_NhanVien]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -649,7 +693,7 @@ BEGIN
 	END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_ADDLOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_ADDLOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -693,7 +737,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_ADDLOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_ADDLOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -737,7 +781,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_UPDATELOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_UPDATELOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -784,7 +828,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_UPDATELOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DIEUKHACTACTUONG_UPDATELOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -831,7 +875,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DSCTL]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DSCTL]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -846,7 +890,7 @@ BEGIN
 	WHERE NGAYBATDAU >= @NgayBD AND NGAYKETTHUC <= @NgayKT
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DSTPNT]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DSTPNT]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -861,7 +905,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_GETTPNT]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_GETTPNT]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -885,7 +929,7 @@ BEGIN
 	WHERE MATPNT = @MaTP
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_GETTPNTBYIDCTL]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_GETTPNTBYIDCTL]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -903,7 +947,7 @@ BEGIN
 					WHERE IDCTL = @IDTrienLam )
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_ADDLOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_ADDLOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -946,7 +990,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_ADDLOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_ADDLOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -989,7 +1033,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_UPDATELOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_UPDATELOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1035,7 +1079,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_UPDATELOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_HOIHOA_UPDATELOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1081,7 +1125,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_IDBST]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_IDBST]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1098,7 +1142,7 @@ DECLARE @check int
 SELECT @check	--Không bị trùng được thêm
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_IDTG]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_IDTG]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1115,7 +1159,7 @@ DECLARE @check int
 SELECT @check	--Không bị trùng được thêm
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_ADDLOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_ADDLOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1157,7 +1201,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_ADDLOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_ADDLOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1199,7 +1243,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_UPDATELOAIDIMUON]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_UPDATELOAIDIMUON]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1244,7 +1288,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_UPDATELOAISOHUU]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOAIHINHKHAC_UPDATELOAISOHUU]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1289,7 +1333,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_MANV]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_MANV]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1308,7 +1352,7 @@ END
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_MENULOAI]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_MENULOAI]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1324,21 +1368,7 @@ BEGIN
         SET @Check = 0;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_Restore_Database]    Script Date: 2023-07-11 02:19:03 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROC [dbo].[SP_Restore_Database]
-@LOCATION NVARCHAR(1000)
-AS
-BEGIN
-	RESTORE DATABASE BAOTANG
-	FROM DISK = @LOCATION
-	WITH REPLACE, RECOVERY;
-END
-GO
-/****** Object:  StoredProcedure [dbo].[SP_SDT]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_SDT]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1355,7 +1385,7 @@ DECLARE @check INT
 SELECT @check	--Không bị trùng được thêm
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TaoTaiKhoan]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TaoTaiKhoan]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1397,7 +1427,7 @@ SELECT @check
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_XoaLogin]    Script Date: 2023-07-11 02:19:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_XoaLogin]    Script Date: 2023-07-11 09:57:56 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1413,3 +1443,53 @@ BEGIN
   EXEC SP_DROPLOGIN @LGNAME
 END
 GO
+
+-----------------------------------------------------------
+USE master
+CREATE PROCEDURE [dbo].[SP_RestoreBaoTangDatabase]    
+	@BackupPath NVARCHAR(255)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @DatabaseName NVARCHAR(128) = 'BAOTANG';
+
+    -- Kiểm tra xem tệp backup tồn tại hay không
+    IF EXISTS (SELECT 1 FROM sys.sysdevices WHERE name = 'BaoTangDevices')
+    BEGIN
+        -- Kiểm tra xem database đã tồn tại hay chưa
+        IF DB_ID(@DatabaseName) IS NOT NULL
+        BEGIN
+            -- Đóng kết nối đến database nếu đang mở
+            IF DB_ID(@DatabaseName) <> DB_ID()
+            BEGIN
+                ALTER DATABASE BAOTANG SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+            END
+            -- Khôi phục database từ tệp backup
+            RESTORE DATABASE BAOTANG 
+            FROM DISK = @BackupPath
+            WITH REPLACE;
+            -- Mở kết nối đến database
+            ALTER DATABASE BAOTANG SET MULTI_USER;
+            
+            -- Hiển thị thông báo khi khôi phục thành công
+            PRINT 'Khôi phục database BAOTANG thành công.';
+        END
+        ELSE
+        BEGIN
+            -- Hiển thị thông báo khi database chưa tồn tại
+            PRINT 'Database BAOTANG chưa tồn tại.';
+        END
+    END
+    ELSE
+    BEGIN
+        -- Hiển thị thông báo khi thiết bị backup chưa được tạo
+        PRINT 'Thiết bị backup chưa được tạo.';
+    END
+END
+
+
+
+--------------------------------------------------------
+use master;
+EXEC sp_addumpdevice 'disk', 'BaoTangDevices', 'C:\SQLBackups\BaoTangDevices.bak'

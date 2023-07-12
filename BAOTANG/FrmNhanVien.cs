@@ -46,7 +46,7 @@ namespace BAOTANG
 
             else if (Program.mGroup == "MANAGER")
             {
-                btnItemAdd.Enabled = btnItemDelete.Enabled = true;
+                btnItemAdd.Enabled = true;
             }
 
             if (bdsNV.Count == 0)

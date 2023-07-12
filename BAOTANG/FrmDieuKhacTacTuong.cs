@@ -94,7 +94,7 @@ namespace BAOTANG
         {
             vIEW_DIEUKHACTACTUONGBindingSource.CancelEdit();
             btnItemAdd.Enabled = btnItemEdit.Enabled = btnItemDelete.Enabled = btnItemReload.Enabled = btnItemExit.Enabled = vIEW_DIEUKHACTACTUONGDataGridView.Enabled = btnItemReadMore.Enabled = true;
-            btnItemUndo.Enabled = pnlDetail.Enabled = false;
+            btnItemSave.Enabled = btnItemUndo.Enabled = pnlDetail.Enabled = false;
             txtMATPNT.Enabled = true;
         }
 

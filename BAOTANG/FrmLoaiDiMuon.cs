@@ -13,6 +13,7 @@ namespace BAOTANG
 {
     public partial class FrmLoaiDiMuon : Form
     {
+        
         public FrmLoaiDiMuon(String MATPNT)
         {
             InitializeComponent();
@@ -46,9 +47,6 @@ namespace BAOTANG
                     dtNgayMuon.Text = ngayMuon.ToString("yyyy/MM/dd");
                     dtNgayTra.Text = ngayTra.ToString("yyyy/MM/dd");
 
-                   
-
-
                 }
                 else
                 {
@@ -63,20 +61,17 @@ namespace BAOTANG
             }
         }
 
-        private void lOAIDIMUONBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableAdapterManager.UpdateAll(this.BAOTANGDataSet);
-
-        }
-
         private void FrmLoaiDiMuon_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'BAOTANGDataSet.LOAIDIMUON' table. You can move, or remove it, as needed.
-            this.lOAIDIMUONTableAdapter.Fill(this.BAOTANGDataSet.LOAIDIMUON);
+            // TODO: This line of code loads data into the 'bAOTANGDataSet.LOAIDIMUON' table. You can move, or remove it, as needed.
+            this.lOAIDIMUONTableAdapter.Fill(this.bAOTANGDataSet.LOAIDIMUON);
             // TODO: This line of code loads data into the 'bAOTANGDataSet.BOSUUTAP' table. You can move, or remove it, as needed.
-            this.BOSUUTAPTableAdapter.Fill(this.BAOTANGDataSet.BOSUUTAP);
+            this.bOSUUTAPTableAdapter.Fill(this.bAOTANGDataSet.BOSUUTAP);
 
         }
+
+        
+
+        
     }
 }

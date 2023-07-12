@@ -489,7 +489,7 @@ namespace BAOTANG
                                     command.Parameters.AddWithValue("@VATLIEU", txtVatLieu.Text);
                                     command.Parameters.AddWithValue("@TRUONGPHAI", txtTruongPhai.Text);
 
-                                    command.Parameters.AddWithValue("@IDBST", loaiDiMuon.cmbBST.SelectedItem.ToString());
+                                    command.Parameters.AddWithValue("@IDBST", loaiDiMuon.cmbBST.SelectedValue.ToString());
                                     command.Parameters.AddWithValue("@NGAYMUON", loaiDiMuon.dtNgayMuon.DateTime);
                                     command.Parameters.AddWithValue("@NGAYTRA", loaiDiMuon.dtNgayTra.DateTime);
 

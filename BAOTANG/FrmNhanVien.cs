@@ -212,7 +212,12 @@ namespace BAOTANG
                 return;
             }
 
-            
+            if (cmbChucVu.Text.Trim() == "")
+            {
+                MessageBox.Show("Chức vụ không được để trống !", "", MessageBoxButtons.OK);
+                cmbChucVu.Focus();
+                return;
+            }
 
             if (flag == "add")
             {

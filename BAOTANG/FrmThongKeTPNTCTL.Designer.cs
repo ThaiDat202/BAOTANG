@@ -163,9 +163,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(194, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(626, 37);
+            this.label1.Size = new System.Drawing.Size(523, 37);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Thông Tin TPNT Của Các Cuộc Triển Lãm";
+            this.label1.Text = "Thông Tin của Các Cuộc Triển Lãm";
             // 
             // panelControl1
             // 

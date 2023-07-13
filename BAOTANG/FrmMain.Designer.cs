@@ -63,7 +63,6 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbCaiDat = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.MANV = new System.Windows.Forms.ToolStripStatusLabel();
@@ -171,7 +170,7 @@
             // 
             // btnThongKeTPNTCTL
             // 
-            this.btnThongKeTPNTCTL.Caption = "Thống kê TPNT Cuộc triển lãm";
+            this.btnThongKeTPNTCTL.Caption = "Thống kê Cuộc triển lãm";
             this.btnThongKeTPNTCTL.Id = 7;
             this.btnThongKeTPNTCTL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKeTPNTCTL.ImageOptions.Image")));
             this.btnThongKeTPNTCTL.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongKeTPNTCTL.ImageOptions.LargeImage")));
@@ -364,8 +363,7 @@
             // rbCaiDat
             // 
             this.rbCaiDat.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup10});
+            this.ribbonPageGroup4});
             this.rbCaiDat.Name = "rbCaiDat";
             this.rbCaiDat.Text = "Cài đặt";
             this.rbCaiDat.Visible = false;
@@ -373,12 +371,9 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnBackup);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnRestore);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnRestore);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup4.Text = "Cài Đặt";
             // 
             // xtraTabbedMdiManager1
             // 
@@ -477,7 +472,6 @@
         private DevExpress.XtraBars.BarButtonItem btnLoaiDiMuon;
         public DevExpress.XtraBars.BarButtonItem btnXoaTK;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
     }
 }
 
